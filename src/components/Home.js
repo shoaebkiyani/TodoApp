@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AddTodos from "../components/AddTodos";
 import TodoList from "../components/TodoList";
 
 // Get TodoList from LocalStorage
-const getTodoList = () => {
-  return JSON.parse(localStorage.getItem("lists"));
-};
+// const getTodoList = () => {
+//   return JSON.parse(localStorage.getItem("lists"));
+// };
 
 const Home = () => {
-  // const [todos, setToDos] = useState([
-  //   { id: 1, name: "Go to the supermarket", complete: false },
-  //   { id: 2, name: "Call Alice", complete: false },
-  //   { id: 3, name: "Ask Alice to call Bob", complete: false },
-  //   { id: 4, name: "Do the dishes", complete: false },
-  //   { id: 5, name: "Change car tyres", complete: false },
-  // ]);
-  const [todos, setToDos] = useState(getTodoList());
+  const [todos, setToDos] = useState([
+    { id: 1, name: "Go to the supermarket", complete: false },
+    { id: 2, name: "Call Alice", complete: false },
+    { id: 3, name: "Ask Alice to call Bob", complete: false },
+    { id: 4, name: "Do the dishes", complete: false },
+    { id: 5, name: "Change car tyres", complete: false },
+  ]);
+  // const [todos, setToDos] = useState(getTodoList());
 
   // Add Single Todo in a list
   const addTodo = (newTodos) => {
@@ -41,9 +41,9 @@ const Home = () => {
   };
 
   //Add Todo to a local storage
-  useEffect(() => {
-    localStorage.setItem("lists", JSON.stringify(todos));
-  }, [todos]);
+  // useEffect(() => {
+  //   localStorage.setItem("lists", JSON.stringify(todos));
+  // }, [todos]);
 
   return (
     <div>
