@@ -10,7 +10,7 @@ const AddTodos = ({ todos, addTodo }) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    var newTodos = todos.slice();
+    let newTodos = todos.slice();
     newTodos.push({
       id: generateNewId(),
       name: newTodoName,

@@ -1,6 +1,6 @@
 const Todos = ({ todo, onClick, onRemoveClick }) => {
-  var color;
-  var success;
+  let color;
+  let success;
 
   if (todo.complete === true) {
     color = "lightgreen";
